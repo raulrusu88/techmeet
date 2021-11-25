@@ -25,6 +25,7 @@ export const NavigationBar = () => {
           variant="outline"
           colorScheme="brand.primary"
           color="#fff"
+          borderRadius={3}
           h={9}
           marginRight={3}
         >
@@ -32,7 +33,7 @@ export const NavigationBar = () => {
         </Button>
         <Button
           bgGradient="linear(to-r, brand.pink, brand.red)"
-          borderRadius={4}
+          borderRadius={3}
           colorScheme="brand.secondary"
           h={9}
           _hover={{ bgGradient: "linear(to-r, brand.lightblue, brand.blue)" }}

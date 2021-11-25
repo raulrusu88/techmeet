@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Layout } from "../core/layout/Layout";
 import { MeetupsContainer } from "../core/components/MeetupsContainer";
 import { MeetupCard } from "../core/components/MeetupCard";
+import { Text, Center } from "@chakra-ui/layout";
 
 export default function Index() {
   return (
@@ -13,8 +14,12 @@ export default function Index() {
       </Head>
 
       <Layout>
+        <Center my={10}>
+          <Text color="#fff" fontSize="30">
+            Below you will find all the Tech Meetings in Romania
+          </Text>
+        </Center>
         <MeetupsContainer>
-          <MeetupCard />
           <MeetupCard />
           <MeetupCard />
           <MeetupCard />
