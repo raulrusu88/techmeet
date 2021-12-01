@@ -1,6 +1,11 @@
-import { Flex, Spacer, Box, Button } from "@chakra-ui/react";
+import { useState } from "react";
+import { ModalPopup } from "./ModalPopup";
+import { Flex, Spacer, Box, Button, useDisclosure } from "@chakra-ui/react";
 
 export const NavigationBar = () => {
+  // State for the modal
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <nav>
       <Flex
@@ -28,10 +33,12 @@ export const NavigationBar = () => {
           borderRadius={3}
           h={9}
           marginRight={3}
+          onClick={onOpen}
         >
           Create Meetup
         </Button>
-        <Button
+        <ModalPopup isOpen={isOpen} onClose={onClose} />
+        {/* <Button
           bgGradient="linear(to-r, brand.pink, brand.red)"
           borderRadius={3}
           colorScheme="brand.secondary"
@@ -39,7 +46,7 @@ export const NavigationBar = () => {
           _hover={{ bgGradient: "linear(to-r, brand.lightblue, brand.blue)" }}
         >
           Sign In
-        </Button>
+        </Button> */}
       </Flex>
     </nav>
   );

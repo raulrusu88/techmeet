@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "react-datepicker/dist/react-datepicker.css";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../utils/theme";
 
